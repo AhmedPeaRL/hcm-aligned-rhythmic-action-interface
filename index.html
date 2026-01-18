@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rhythmic Action Interface</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #111;
+      color: #f0f0f0;
+      padding: 3rem;
+      line-height: 1.6;
+    }
+    textarea, input {
+      width: 100%;
+      background: #1a1a1a;
+      color: #f0f0f0;
+      border: none;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    pre {
+      margin-top: 2rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Rhythmic Action Field</h2>
+
+  <p>
+    No tool is defined.<br/>
+    No outcome is promised.<br/>
+    Action may still occur.
+  </p>
+
+  <label>
+    Action (formless, unsuggested):
+    <textarea id="actionInput" rows="6"></textarea>
+  </label>
+
+  <label>
+    Optional direction (URL, system, void):
+    <input id="destinationInput" placeholder="leave empty if unknown"/>
+  </label>
+
+  <button id="commit">Allow Action</button>
+
+  <pre id="status"></pre>
+
+  <script type="module" src="action.js"></script>
+</body>
+</html>
