@@ -1,5 +1,5 @@
-/* Visual Stillness Layer */
-/* This file does not design. It stabilizes. */
+/* HCM Visual Stillness Guard */
+/* This file prevents visual interference. It does not design. */
 
 :root {
   --field-bg: #0f0f11;
@@ -7,10 +7,12 @@
   --field-muted: #9a9a9a;
 }
 
-/* No gradients. No shadows. No borders. */
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  animation: none !important;
+  transition: none !important;
 }
 
 html, body {
@@ -20,10 +22,10 @@ html, body {
   color: var(--field-fg);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-/* Prevent visual urgency */
+/* Remove all visual urgency */
 
 a,
 button,
@@ -34,30 +36,18 @@ textarea {
   border: none;
   outline: none;
   box-shadow: none;
-}
-
-/* Remove affordance signaling */
-
-button {
   cursor: default;
 }
 
-/* Text is allowed to breathe */
-
-p,
-span,
-div {
-  letter-spacing: 0.01em;
-}
-
-/* Silence on hover */
+/* No hover signaling */
 
 *:hover {
-  transition: none;
+  background: inherit;
+  color: inherit;
 }
 
-/* No animation by default */
+/* Text breathing only */
 
-* {
-  animation: none !important;
+p, span, div {
+  letter-spacing: 0.01em;
 }
