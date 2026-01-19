@@ -1,0 +1,63 @@
+/* Visual Stillness Layer */
+/* This file does not design. It stabilizes. */
+
+:root {
+  --field-bg: #0f0f11;
+  --field-fg: #e6e6e6;
+  --field-muted: #9a9a9a;
+}
+
+/* No gradients. No shadows. No borders. */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--field-bg);
+  color: var(--field-fg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Prevent visual urgency */
+
+a,
+button,
+input,
+textarea {
+  background: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Remove affordance signaling */
+
+button {
+  cursor: default;
+}
+
+/* Text is allowed to breathe */
+
+p,
+span,
+div {
+  letter-spacing: 0.01em;
+}
+
+/* Silence on hover */
+
+*:hover {
+  transition: none;
+}
+
+/* No animation by default */
+
+* {
+  animation: none !important;
+}
