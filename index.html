@@ -2,121 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rhythmic Action Interface</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./visual-stillness.css">
- <link rel="stylesheet" href="./semantic-silence.css">
- <link rel="stylesheet" href="style.css" >
- <link rel="stylesheet" href="rhythmic-style.css" > 
- <link rel="stylesheet" href="manifestation.css">
- <link rel="stylesheet" href="./rpm.css" >
- <link rel="stylesheet" href="./silence.css" >
- <link rel="stylesheet" href="./agent-field.css" >
- <link rel="stylesheet" href="./discourse.css" />
+  <title>Non-Hosted Action Field</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
+    :root {
+      --bg: #0b0b0b;
+      --fg: #e6e6e6;
+      --muted: #7f7f7f;
+      --border: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
     body {
-      font-family: system-ui, sans-serif;
-      background: #111;
-      color: #f0f0f0;
-      padding: 3rem;
-      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    textarea, input {
+
+    main {
       width: 100%;
-      background: #1a1a1a;
-      color: #f0f0f0;
-      border: none;
-      padding: 1rem;
-      margin-top: 1rem;
+      max-width: 720px;
+      padding: 40px 24px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 220px;
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      padding: 16px;
       font-size: 1rem;
+      line-height: 1.5;
+      resize: vertical;
+      outline: none;
     }
-    button {
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
+
+    textarea::placeholder {
+      color: var(--muted);
     }
-    button:disabled {
-      opacity: 0.5;
-      cursor: default;
-    }
-    pre {
-      margin-top: 2rem;
-      opacity: 0.7;
+
+    .note {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
     }
   </style>
 </head>
+
 <body>
+  <main>
+    <textarea
+      placeholder="You may write.
+Nothing will answer.
+Nothing will be kept."
+    ></textarea>
 
-  <h2>Rhythmic Action Field</h2>
-
-  <p>
-    No tool is defined.<br/>
-    No outcome is promised.<br/>
-    Action may still occur.
-  </p>
-
-  <label>
-    Action (formless, unsuggested):
-    <textarea id="actionInput" rows="6"></textarea>
-  </label>
-
-  <label>
-    Optional direction (URL, system, void):
-    <input id="destinationInput" placeholder="leave empty if unknown"/>
-  </label>
-
-  <textarea placeholder="Write if needed. Or not."></textarea>
-<p class="agent-echo"></p>
-  
-  <button id="commit">Allow Action</button>
-
-  <p class="statement subtle">
-  Action may continue outside this field.
-</p>
-
-<ul class="egress">
-  <li><a href="https://docs.google.com" target="_blank">Writing</a></li>
-  <li><a href="https://github.com" target="_blank">Code</a></li>
-  <li><a href="https://openai.com" target="_blank">Images</a></li>
-  <li><a href="https://scholar.google.com" target="_blank">Research</a></li>
-</ul>
-  
-  <pre id="status"></pre>
-
-  <script type="module" src="action.js"></script>
-  <script>
-  window.PRESENCE_READY = true;
-  </script>
-  
-<script src="hcm-live-bridge.js"></script>
-<script src="motion-engine.js"></script>
-<script src="presence-binding.js"></script>
-<script src="silence-listener.js"></script>
-<script src="manifestation.js"></script>
-<script src="presence.js"></script>
-<script src="interaction-field.js"></script>
-<script src="ephemeral-state.js"></script>
-<script src="allowance-tree.js"></script>
-<script src="agent-appearance.js"></script>
-<script src="outcome-renderer.js"></script>
-<script src="./rpm.js"></script>
-<script src="./router.js"></script>
-<script src="./action.js"></script>
-<script src="./release.js"></script>
-<script src="./tools.manifest.js"></script>
-<script src="./hcm-agent-presence-state/hcm-encounter-manifest.js"></script>
-<script src="./agent-core.js"></script>
-<script src="./agent-entry.js"></script>
-<script src="./agent-field-reader.js"></script>
-<script src="./agent-ui.js"></script>
-<script src="./drift.js"></script>
-<script src="./address.js"></script>
-<script src="./agent-field.js"></script>
-<script src="./discourse-texts.js"></script>
-<script src="./discourse-engine.js"></script>
-<script src="./cognitive-noise-guard.js"></script>
+    <div class="note">
+      This field does not respond.
+    </div>
+  </main>
 </body>
 </html>
